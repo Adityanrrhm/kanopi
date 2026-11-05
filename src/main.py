@@ -1,1 +1,3 @@
-print("Hello World")
+from auth.auth import hai
+
+hai()
