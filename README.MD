@@ -52,7 +52,7 @@ kanopi/
 ## How to Start
 
 * **Kloning atau Unduh Repository
-git clone [https://github.com/username/kanopi.git](https://github.com/username/kanopi.git)
+git clone https://github.com/Adityanrrhm/kanopi.git
 cd kanopi
 
 * **Aktivasi venv
