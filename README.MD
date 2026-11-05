@@ -58,6 +58,7 @@ cd kanopi
 * **Aktivasi venv
 
 - Windows
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 python -m venv venv
 venv\Scripts\activate
 
@@ -67,7 +68,7 @@ source venv/bin/activate
 
 
 * **Install Dependensi
-pip install -r requirements.txt
+pip install -r requirement.txt
 
 
 * **Run code
