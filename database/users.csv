@@ -1,0 +1,3 @@
+id_user,username,password,role
+USR-001,aditya,0,admin
+USR-002,dummyuser,00000000,user
