@@ -64,14 +64,24 @@ def login():
     print("\n=== LOGIN KANOPI FOOD ===")
     username = input("Masukkan username: ").strip()
     password = input("Masukkan password: ").strip()
+
+    print(username)
+    print(password)
     
     if not os.path.exists(PATH_USERS):
         print("[!] Belum ada data pengguna sama sekali. Silakan registrasi terlebih dahulu.")
         return None
         
     df_users = pd.read_csv(PATH_USERS)
-    
-    user_cocok = df_users[(df_users['username'] == username) & (df_users['password'] == password)]
+    df_users['username'] = df_users['username'].astype(str).str.strip()
+    df_users['password'] = df_users['password'].astype(str).str.strip()
+
+    user_cocok = df_users[
+        (df_users['username'].str.lower() == username.lower()) & 
+        (df_users['password'] == password.lower())
+    ]
+
+    print(user_cocok)
     
     if not user_cocok.empty:
         role_user = user_cocok['role'].values[0]
