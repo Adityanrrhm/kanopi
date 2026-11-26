@@ -1,5 +1,5 @@
 id_user,username,password,role,nama,no_hp,status
 USR-001,admin,admin00,admin,Aditya Admin,081234567890,aktif
-USR-002,azkakasir,azkakasir00,kasir,Azka Kasir,0856532472,aktif
+USR-002,azkakasir,azkakasir00,kasir,Azka Kasir,0856532472,nonaktif
 USR-003,lelinkasir,lelinkasir00,kasir,Lelin kasir,0863562434,aktif
 USR-004,aditkasir,aditkasir000,kasir,Adit Kasir,08465236432,aktif

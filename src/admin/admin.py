@@ -17,10 +17,10 @@ def menu_admin(user_session=None):
     admin_name = user_session['nama'] if user_session and user_session.get('nama') else "Admin"
     while True:
         clear_screen()
-        menu_count   = len(load_menu())
-        users_df     = load_users()
+        menu_count = len(load_menu())
+        users_df = load_users()
         cashier_count = len(users_df[users_df['role'] == 'kasir'])
-        order_count  = len(load_orders())
+        order_count = len(load_orders())
 
         box_width = 46
         print("\n+" + "-" * box_width + "+")

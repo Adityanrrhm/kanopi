@@ -31,11 +31,9 @@ def main_menu():
             if user_session:
                 user_role = user_session.get('role')
                 if user_role == 'kasir':
-                    menu_kasir(user_session)
-                elif user_role == 'admin':
-                    print("\n[INFO] Akun ini adalah Pemilik/Admin. Mengalihkan ke menu Admin...")
+                    print("\n[INFO] Akun ini adalah Kasir. Mengalihkan ke menu Kasir...")
                     pause_screen()
-                    menu_admin(user_session)
+                    menu_kasir(user_session)
                 else:
                     print("\n[ERROR] Role pengguna tidak valid.")
                     pause_screen()
@@ -44,11 +42,9 @@ def main_menu():
             if user_session:
                 user_role = user_session.get('role')
                 if user_role == 'admin':
-                    menu_admin(user_session)
-                elif user_role == 'kasir':
-                    print("\n[INFO] Akun ini adalah Kasir. Mengalihkan ke menu Kasir...")
+                    print("\n[INFO] Akun ini adalah Pemilik/Admin. Mengalihkan ke menu Admin...")
                     pause_screen()
-                    menu_kasir(user_session)
+                    menu_admin(user_session)
                 else:
                     print("\n[ERROR] Role pengguna tidak valid.")
                     pause_screen()

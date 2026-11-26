@@ -381,9 +381,10 @@ def login():
         'status': account_status
     }
 
-    display_name = user_session['nama'] if user_session['nama'] else user_session['username']
-    print(f"\n[OK] Login berhasil. Selamat bertugas, {display_name} ({user_session['role']}).")
+    print(f"\n[OK] Login Berhasil. Memvalidasi hak akses...")
     pause_screen()
+    # display_name = user_session['nama'] if user_session['nama'] else user_session['username']
+    # print(f"\n[OK] Login berhasil. Selamat bertugas, {display_name} ({user_session['role']}).")
     return user_session
 
 def change_password(user_session):
