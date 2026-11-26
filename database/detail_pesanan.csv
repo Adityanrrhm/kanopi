@@ -1,0 +1,8 @@
+kode_pesanan,id_menu,nama_menu,harga_satuan,jumlah,subtotal
+TRX-20261126-001,MNU-007,Nasi Goreng Balado,12000,4,48000
+TRX-20261126-001,MNU-008,Es Cincau Hitam,5000,4,20000
+TRX-20261126-002,MNU-004,Tahu Tempe Goreng Balado,3000,7,21000
+TRX-20261126-002,MNU-005,Es Teh Manis,3000,7,21000
+TRX-20261126-003,MNU-003,Nasi Telur Dadar Krispi,9000,4,36000
+TRX-20261126-003,MNU-008,Es Cincau Hitam,5000,6,30000
+TRX-20261126-004,MNU-005,Es Teh Manis,3000,3,9000
