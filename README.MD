@@ -140,7 +140,3 @@ Jika berkas `database/users.csv` belum ada, sistem akan membuat data awal beriku
 | **Kasir** | `aditkasir` | `ak000000` | Akses operasional buka/tutup shift, transaksi POS, & cetak struk. |
 
 ---
-
-## Dokumentasi Lengkap
-Dokumentasi teknis menyeluruh, kamus data, diagram vektor alur sistem (SVG), dan format tampilan terminal dapat diakses pada berkas:
-- **[kanopi_documentation.html](kanopi_documentation.html)**
