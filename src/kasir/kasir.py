@@ -14,7 +14,6 @@ from core.database import (
     load_users
 )
 from auth.auth import (
-    change_password,
     buka_shift,
     tutup_shift
 )

@@ -35,11 +35,13 @@ def select_menu_interactive(menu_df, prompt_label):
             elif method.startswith("1"):
                 keyword = questionary.text("Masukkan nama atau ID menu:").ask()
                 if not keyword or not keyword.strip():
+                    print("[INFO] Pencarian Tidak Valid.")
                     continue
                 clean_kw = keyword.strip().lower()
-                id_match   = full_menu_df['id_menu'].astype(str).str.lower().str.contains(clean_kw, na=False)
+                id_match = full_menu_df['id_menu'].astype(str).str.lower().str.contains(clean_kw, na=False)
                 name_match = full_menu_df['nama_menu'].astype(str).str.lower().str.contains(clean_kw, na=False)
                 filtered = full_menu_df[id_match | name_match]
+
                 if filtered.empty:
                     print(f"\n[INFO] Tidak ditemukan menu dengan kata kunci '{keyword}'.")
                     pause_screen()
@@ -182,7 +184,7 @@ def search_menu():
         return
 
     clean_keyword = keyword.strip().lower()
-    id_matched   = menu_df['id_menu'].astype(str).str.lower().str.contains(clean_keyword, na=False)
+    id_matched = menu_df['id_menu'].astype(str).str.lower().str.contains(clean_keyword, na=False)
     name_matched = menu_df['nama_menu'].astype(str).str.lower().str.contains(clean_keyword, na=False)
     matched_menu = menu_df[id_matched | name_matched]
 
@@ -240,6 +242,9 @@ def update_menu():
                     menu_df.loc[menu_index, 'nama_menu'] = new_name.strip()
                     save_menu(menu_df)
                     print("[OK] Nama menu berhasil diubah.")
+                    pause_screen()
+                else:
+                    print("[ERROR] Nama menu tidak valid.")
                     pause_screen()
             elif edit_option.startswith("2"):
                 new_cat_choice = questionary.select(
